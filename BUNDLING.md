@@ -58,7 +58,7 @@ linux/amd64`).
 4. **Homebrew / Scoop** — TODO (tap + cask pointing at the Release archives).
 
 > **Personal note:** I primarily use the `curl | sh` path on Ubuntu 24.04 and
-> `darwin-arm64` (M-series Mac). The npm channel is what I test least often —
-> if something breaks for you there, open an issue and I'll take a look. For
-> local development I just run `node lib/dist/index.js` directly after `npm run
-> build`, skipping the bundle entirely.
+> `darwin-arm64` (M-series Mac). The npm channel is what I use day-to-day for
+> quick installs on dev machines where Node is already present. Haven't tested
+> the Windows path personally — contributions/bug reports for that channel are
+> especially welcome.
