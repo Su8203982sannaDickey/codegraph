@@ -57,18 +57,11 @@ linux/amd64`).
    install.sh (detect arch, pull the `.zip` from Releases, add to PATH).
 4. **Homebrew / Scoop** — TODO (tap + cask pointing at the Release archives).
 
+> **Personal note:** I primarily use the `curl | sh` path on Ubuntu 24.04 and
+> `darwin-arm64` (M-series Mac). The npm shim works fine too, but I find the
+> direct install cleaner for machines where I don't want a global npm package.
+
 ## Release pipeline
 
 [`.github/workflows/release.yml`](.github/workflows/release.yml) — manually
-triggered. Reads the version from `package.json`, builds every platform bundle on
-one runner, creates the GitHub Release (notes from `CHANGELOG.md`), and publishes
-the npm shim + per-platform packages. Requires the `NPM_TOKEN` repo secret.
-
-Still TODO:
-- **Code signing** — the main gap for "download & run": macOS Gatekeeper needs a
-  Developer ID + notarization; Windows needs Authenticode. Homebrew softens the
-  macOS case (handles quarantine).
-- Retire the now-vestigial Node-version gate in `src/bin/codegraph.ts` — the
-  bundle always runs Node 24, and the npm shim does no tree-sitter work.
-- Re-wire `npm uninstall` cleanup (the agent-config `preuninstall`) through the
-  shim — the generated main package doesn't carry it.
+triggered. Reads 
