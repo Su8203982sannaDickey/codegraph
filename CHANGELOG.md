@@ -21,8 +21,9 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `5000`, `0` disables). Resolves
   [#277](https://github.com/colbymchenry/codegraph/issues/277).
 
-  > **Personal note:** I set `CODEGRAPH_PPID_POLL_MS=2000` in my dotfiles for
-  > a snappier cleanup on my dev machine — hasn't caused any issues so far.
+  > **Personal note:** I set `CODEGRAPH_PPID_POLL_MS=1000` in my dotfiles —
+  > dropped it from 2000 to 1000 since I run this on a beefy workstation and
+  > want near-instant cleanup when my editor crashes. YMMV on slower machines.
 
 ### Added
 - **Release archives now ship with a `SHA256SUMS` file**, and the npm launcher
@@ -49,6 +50,4 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - **`install.sh` failing with `403` / "could not resolve latest version" on
   shared or cloud hosts.** The standalone installer resolved the latest release
   through the GitHub API, whose unauthenticated limit is 60 requests/hour per IP
-  — routinely exhausted on cloud devboxes and CI where many users share an
-  address, returning `403` (issue #325). It now resolves the version from the
-  `releases/latest` web redirect, whic
+  — routinely exhausted on cloud dev
