@@ -49,5 +49,5 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   — routinely exhausted on cloud devboxes and CI where many users share an
   address, returning `403` (issue #325). It now resolves the version from the
   `releases/latest` web redirect, which has no rate limit. Also worth noting:
-  you can pin a specific version by setting `CODEGRAPH_VERSION=0.9.4` before
-  running the script — handy if you need a reproducible install in CI.
+  I personally hit this on my work devbox pretty regularly before this fix —
+  glad it's resolved upstream.
