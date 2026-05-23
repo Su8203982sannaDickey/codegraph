@@ -58,10 +58,7 @@ linux/amd64`).
 4. **Homebrew / Scoop** — TODO (tap + cask pointing at the Release archives).
 
 > **Personal note:** I primarily use the `curl | sh` path on Ubuntu 24.04 and
-> `darwin-arm64` (M-series Mac). The npm shim works fine too, but I find the
-> direct install cleaner for machines where I don't want a global npm package.
-
-## Release pipeline
-
-[`.github/workflows/release.yml`](.github/workflows/release.yml) — manually
-triggered. Reads 
+> `darwin-arm64` (M-series Mac). The npm channel is what I test least often —
+> if something breaks for you there, open an issue and I'll take a look. For
+> local development I just run `node lib/dist/index.js` directly after `npm run
+> build`, skipping the bundle entirely.
