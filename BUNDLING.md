@@ -58,7 +58,7 @@ linux/amd64`).
    install.sh (detect arch, pull the `.zip` from Releases, add to PATH).
 4. **Homebrew / Scoop** — TODO (tap + cask pointing at the Release archives).
 
-> **Personal note:** I primarily use the `curl | sh` path on Ubuntu 24.04 and
-> `darwin-arm64` (M-series Mac). The `darwin-arm64` bundle is the one I test most
-> frequently — if you're on Apple Silicon and run into issues, feel free to open
-> an issue and I'll likely be able to reproduce it quickly.
+> **Personal note:** I primarily use this on `darwin-arm64` (M-series Mac) and
+> `linux-x64` (VPS). The `linux-arm64` and Windows targets are untested on my end
+> — use them at your own risk until I get around to verifying them. The
+> `darwin-x64` target should still work fine on Intel Macs.
