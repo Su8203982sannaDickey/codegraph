@@ -31,6 +31,7 @@ Targets: `darwin-arm64`, `darwin-x64`, `linux-x64`, `linux-arm64`, `win32-x64`,
 ```bash
 scripts/build-bundle.sh linux-x64            # -> release/codegraph-linux-x64.tar.gz
 scripts/build-bundle.sh win32-x64            # -> release/codegraph-win32-x64.zip
+scripts/build-bundle.sh darwin-arm64         # -> release/codegraph-darwin-arm64.tar.gz
 ```
 
 Because dropping better-sqlite3 left **zero native addons**, building a bundle is
@@ -58,7 +59,6 @@ linux/amd64`).
 4. **Homebrew / Scoop** — TODO (tap + cask pointing at the Release archives).
 
 > **Personal note:** I primarily use the `curl | sh` path on Ubuntu 24.04 and
-> `darwin-arm64` (M-series Mac). The npm channel is what I use day-to-day for
-> quick installs on dev machines where Node is already present. Haven't tested
-> the Windows path personally — contributions/bug reports for that channel are
-> especially welcome.
+> `darwin-arm64` (M-series Mac). The `darwin-arm64` bundle is the one I test most
+> frequently — if you're on Apple Silicon and run into issues, feel free to open
+> an issue and I'll likely be able to reproduce it quickly.
