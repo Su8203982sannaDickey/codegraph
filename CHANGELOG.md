@@ -47,7 +47,12 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `CODEGRAPH_DOWNLOAD_BASE=<url>` to point it at your own mirror of the release
   archives; the standalone `install.sh` remains the no-Node alternative. Resolves
   [#303](https://github.com/colbymchenry/codegraph/issues/303).
+
+  > **Personal note:** I work behind a corporate proxy that blocks GitHub
+  > intermittently, so I set `CODEGRAPH_DOWNLOAD_BASE` to point at an internal
+  > Artifactory mirror of the release archives. The fallback logic works
+  > seamlessly — no manual bundle management needed anymore.
+
 - **`install.sh` failing with `403` / "could not resolve latest version" on
   shared or cloud hosts.** The standalone installer resolved the latest release
-  through the GitHub API, whose unauthenticated limit is 60 requests/hour per IP
-  — routinely exhausted on cloud dev
+  through the GitHub API, whose unauthe
